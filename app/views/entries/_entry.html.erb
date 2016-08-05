@@ -1,7 +1,7 @@
 <div>
   <img class="image-upload" src="<%= entry.photo_url %>"/>
   <h3>Posted by: <%= entry.author %> on <%= entry.date_taken %></h3>
-  <p><%= link_to "Edit", edit_entry_path(entry.id)%></p>
+  <p><%= link_to "Edit", edit_entry_path(entry) %></p>
   <p><%= link_to fa_icon("trash"), entry_path(entry.id), method: :delete %></p>
 </div>
 
