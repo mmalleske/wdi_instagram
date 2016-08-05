@@ -1,12 +1,12 @@
 class EntriesController < ApplicationController
   def index
-    @entries = Entry.all.order(upvotes: :desc)
+    @entries = Entry.all
     @entry = Entry.new
   end
 
   def create
     @entry = Entry.new(entry_params)
-    @entry.upvotes = 0
+
     if @entry.save
       redirect_to entries_path
     else
@@ -17,19 +17,7 @@ class EntriesController < ApplicationController
 
   def update
     @entry = Entry.find(params[:id])
-    if params[:upvote]
-      @entry.upvotes += 1
-    elsif params[:downvote]
-      @entry.upvotes -= 1
-    end
-    respond_to do |format|
-      if @entry.save
-        format.html { redirect_to entries_path }
-        format.js { }
-      else
-        raise "Cannot Save!"
-      end
-    end
+
   end
 
   def destroy
@@ -42,6 +30,6 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:name, :link)
+    params.require(:entry).permit(:author, :photo_url, :date_taken)
   end
 end
