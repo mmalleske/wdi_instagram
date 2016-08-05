@@ -1,3 +1,12 @@
+<h1>GWARstagRAM!!!</h1>
+
+<div id="entires-list">
+  <% @entries.each do |entry| %>
+    <%= render partial: 'entry', object: entry %>
+  <% end %>
+</div>
+
+<h3>Create a New Entry</h3>
 <%= form_for @entry do |f| %>
   <%= f.label :author %>:
   <%= f.text_field :author %><br />

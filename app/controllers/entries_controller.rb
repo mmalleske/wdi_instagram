@@ -18,6 +18,14 @@ class EntriesController < ApplicationController
   def update
     @entry = Entry.find(params[:id])
 
+    respond_to do |format|
+      if @entry.save
+        format.html { redirect_to entries_path }
+        format.js { }
+      else
+        raise "Cannot Save!"
+      end
+    end
   end
 
   def destroy

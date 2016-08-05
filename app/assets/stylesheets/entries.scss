@@ -1,3 +1,24 @@
 // Place all the styles related to the entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.image-upload {
+  width: 768px;
+  height: 512px;
+}
+// body {
+//   background: image-url('../images/blood.jpg') no-repeat;
+//   // background-image: url('images/blood.jpg');
+//   // background-image: url(images/blood.jpg);
+// }
+
+html{
+  background: url("blood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120%;
+}
+
+body {
+  color: #fff;
+  font-family: 'Creepster', cursive;
+}
