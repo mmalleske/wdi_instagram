@@ -6,6 +6,15 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(entry_params)
+    # def localtime(utc_offset = nil)
+    #   utc = new_offset(0)
+    #
+    #   Time.utc(
+    #     utc.year, utc.month, utc.day,
+    #     utc.hour, utc.min, utc.sec + utc.sec_fraction
+    #   ).getlocal(utc_offset)
+    # end
+    alias_method :getlocal, :localtime
 
     if @entry.save
       redirect_to entries_path

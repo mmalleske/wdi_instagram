@@ -4,6 +4,8 @@
 .image-upload {
   width: 320px;
   height: 240px;
+  border: 3px solid #fff;
+  border-radius: 10px;
 }
 
 html{
@@ -11,10 +13,13 @@ html{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 110%;
+  overflow: hidden;
+  height: 100%;
 }
 
 body {
+  height: 100%;
+  overflow: auto;
   color: #fff;
   font-family: 'Creepster', cursive;
   text-align: center;
@@ -26,10 +31,23 @@ h1 {
 
 h3 {
   font-size: 40px;
+  padding-top: 10px;
 }
 .entry-container {
   background-color: rgba(38, 12, 12, 0.5);
 }
 .edit {
   display: block;
+}
+
+.container {
+  background-color: rgba(38, 12, 12, 0.5);
+  margin: 0 25%;
+  border-radius: 10px;
+}
+
+.header {
+  background-color: rgba(38, 12, 12, 0.5);
+  margin: 0 20%;
+  border-radius: 10px;
 }
