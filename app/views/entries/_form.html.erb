@@ -1,0 +1,13 @@
+<h3>Create a New Entry</h3>
+<%= form_for @entry do |f| %>
+  <%= f.label :author %>:
+  <%= f.text_field :author %><br />
+
+  <%= f.label :photo_url %>:
+  <%= f.text_field :photo_url %><br />
+
+  <%= f.label :date_taken %>:
+  <%= f.text_field :date_taken %><br />
+
+  <%= f.submit %>
+<% end %>
