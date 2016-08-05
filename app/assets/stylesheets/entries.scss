@@ -15,10 +15,19 @@ html{
   background: url("blood.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 120%;
+  height: 110%;
 }
 
 body {
   color: #fff;
   font-family: 'Creepster', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+h3 {
+  font-size: 40px;
 }
