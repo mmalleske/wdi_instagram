@@ -1,7 +1,7 @@
-<div>
-  <img class="image-upload" src="<%= entry.photo_url %>"/>
+<div class="entry-container">
   <h3>Posted by: <%= entry.author %> on <%= entry.date_taken %></h3>
-  <p><%= link_to "Edit", edit_entry_path(entry) %></p>
-  <p><%= link_to fa_icon("trash"), entry_path(entry.id), method: :delete %></p>
+  <img class="image-upload" src="<%= entry.photo_url %>"/>
+  <div class="edit">
+    <p><%= link_to image_tag("Cleaver.png", height: '110', width: '100'), edit_entry_path(entry.id)%>           <%= link_to image_tag("destroy.png", height: '100', width: '75'), entry_path(entry.id), method: :delete %></p>
+  </div>
 </div>
-
